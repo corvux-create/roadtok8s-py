@@ -17,6 +17,6 @@ jobs:
       run: echo "StrictHostKeyChecking=no" > ~/.ssh/config
     - name: Install NGINX
       run: |
-        export HOST="${{ secrets.AKAMAI_INSTANCE_IP_ADDRESS }}"
+        export HOST="${{ secrets.VBOX_INSTANCE_IP_ADRESS }}"
         ssh root@$HOST sudo apt update
         ssh root@$HOST sudo apt install nginx -y
